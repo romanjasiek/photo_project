@@ -9,6 +9,27 @@ html {
     font-size: 100%;
 }
 
+/** Breakpoints **/
+
+/* 1200px or less **/
+@media (max-width: 75em) {
+
+}
+
+/* 992px or less **/
+
+}
+
+/* 768px or less **/
+@media (max-width: 48em) {
+
+}
+
+/* 576px or less **/
+@media (max-width: 36em) {
+
+}
+
 .icon {
     fill: currentColor;
     height: 1em;
@@ -19,22 +40,169 @@ html {
 }
 
 .icon:hover {
-    fill:rgb(255, 68, 0);
+    fill:rgb(233, 196, 106);
     border-bottom: none;
 }
 
 .header {
+    overflow: hidden;
+    position: relative;
     height: 40rem;
-    /* In CSS, linear-gradient is an image, background-image is another. This is important for the following values */
-    background-image: linear-gradient(-5.71deg, white 49.9%, transparent 50.1%),
-                        url("../img/background.jpeg");
+    min-height: calc(13rem + 32vw);
+}
+
+@media (max-width: 75em) {
+    .header {
+        height: calc(14rem + 32vw); 
+    }
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    bottom: -8rem;
+    background-image: url("../img/background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+}
+
+.header__container{
+    position:relative;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    height: 38.5vw;
+    width: 100vw;
+    bottom: -8rem;
+    background-image: url("../img/background_transparent.webp");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+}
+
+@media (max-width: 75em) {
+    .header::before  {
+        bottom: -4rem;
+    }
+    .header::after {
+        bottom: -4rem;
+    }
+}
+@media (max-width: 62em) {
+    .header::before  {
+        bottom: -1rem;
+    }
+    .header::after {
+        bottom: -1rem;
+    }
+}
+@media (max-width: 36em) { 
+    .header::before {
+        background-size: cover;
+    }
+    .header::after {
+        display: none;
+    }
+    .header__heading-sub-main {
+        font-size: 0.5rem;
+    }
+    .header__heading-sub-main {
+        font-size: 0.2rem;
+    }
+}
+
+.header__heading-container{
+    padding-top: 2.5rem;
+    clear:both;
+}
+
+.header__heading-main{
+    font-size: 7rem;
+    text-align: center;
+    line-height: 85%;
+    color: #555555;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.5rem #cccccc;
+}
+
+@media (max-width: 62em) {
+    .header__heading-main {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .header__heading-main {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 36em) {
+    .header__heading-main {
+        font-size: 2rem;
+    }
+}
+
+.header__heading-sub-main{
+    font-size: 1.0rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    color: rgb(233, 196, 106);
+    text-transform: uppercase;
+    text-shadow: 0 0 0.5rem black;
+    position: relative;
+    z-index: 1;
+}
+
+.header__heading-sub-second{
+    font-size: 0.5rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    color: #eeeeee;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.5rem black;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 48em) {
+    .header__heading-sub-main {
+        font-size: 0.8rem;
+    }
+    .header__heading-sub-second {
+        font-size: 0.3rem;
+    }
+}
+
+@media (max-width: 36em) {
+    .header__heading-sub-main {
+        font-size: 0.3rem;
+    }
+    .header__heading-sub-second {
+        font-size: 0.1rem;
+    }
+}
+
+.header__slope {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10vw;
+    background-image: linear-gradient(-1.71deg, white 49.9%, transparent 50.1%);
     background-repeat: no-repeat, no-repeat;
-    background-position: center 100%, center center;
-    background-size: 100vw 10vw, cover;
+    background-position: center 100%;
+    background-size: 100vw 10vw;
+    z-index: 1;
 }
 
 .container {
-    width: 75rem;
+    max-width: 75rem;
     margin: 0 auto;
 }
 
@@ -42,6 +210,18 @@ html {
     list-style-type: none;
     display: block;
     float: left;
+}
+
+@media (max-width: 62em) {
+    .navigation__list-item--mobile-hidden {
+        display: none;
+    }
+    .header__heading-sub-main {
+        font-size: 0.8rem;
+    }
+    .header__heading-sub-second {
+        font-size: 0.3rem;
+    }
 }
 
 .navigation__list-item--menu {
@@ -61,7 +241,8 @@ html {
 }
 
 .navigation__list-item-link:hover {
-    border-bottom: 0.15rem solid rgb(255,68,0);
+    color: rgb(233, 196, 106);
+    /* border-bottom: 0.15rem solid rgb(233,196,106); */
 }
 
 .navigation__list-item--menu .navigation__list-item-link {
@@ -70,7 +251,7 @@ html {
 
 .navigation__list-item--menu .navigation__list-item-link:hover {
     border-bottom: none;
-    color: rgb(255, 68, 0);
+    color: rgb(233,196,106);
 }
 
 .navigation__list-item-link--logo {
@@ -79,7 +260,7 @@ html {
 
 .navigation__list-item-link--logo:hover {
     border-bottom: none;
-    color: rgb(255, 68, 0);
+    color: rgb(233, 196, 106)
 }
 
 .navigation__list-item-logo {
