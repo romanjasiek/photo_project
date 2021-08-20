@@ -17,7 +17,8 @@ html {
 }
 
 /* 992px or less **/
-
+@media (max-width: 62em) {
+    
 }
 
 /* 768px or less **/
