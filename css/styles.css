@@ -14,7 +14,7 @@ html {
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
-    src: url("../static/Jost-VariableFont_wght.woff2") format("truetype");
+    src: url("../static/Jost-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
@@ -22,7 +22,7 @@ html {
     font-style: italic;
     font-weight: 100 900;
     font-display: swap;
-    src: url("../static/Jost-Italic-VariableFont_wght.woff2") format("truetype");
+    src: url("../static/Jost-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
 /** Breakpoints **/
@@ -150,7 +150,7 @@ html {
     animation-delay: 0.5s;
     animation-duration: 5s;
     animation-fill-mode: both;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes header__heading-main-font-weight {
