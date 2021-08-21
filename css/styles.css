@@ -9,6 +9,22 @@ html {
     font-size: 100%;
 }
 
+@font-face {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("../static/Jost-VariableFont_wght.woff2") format("truetype");
+}
+
+@font-face {
+    font-family: "Jost";
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("../static/Jost-Italic-VariableFont_wght.woff2") format("truetype");
+}
+
 /** Breakpoints **/
 
 /* 1200px or less **/
@@ -123,12 +139,29 @@ html {
 }
 
 .header__heading-main{
+    font-weight: 700;
     font-size: 7rem;
     text-align: center;
     line-height: 85%;
     color: #555555;
     text-transform: uppercase;
     text-shadow: 0 0 0.5rem #cccccc;
+    animation-name: header__heading-main-font-weight;
+    animation-delay: 0.5s;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+}
+
+@keyframes header__heading-main-font-weight {
+    0% {
+        opacity: 0;
+        font-weight: 100;
+    }
+    100% {
+        opacity: 1;
+        font-weight: 700;
+    }
 }
 
 @media (max-width: 62em) {
