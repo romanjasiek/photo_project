@@ -84,7 +84,7 @@ html {
 
 .header::before {
   top: 0;
-  background-image: url("../../img/background.jpeg");
+  background-image: url("../img/background.jpeg");
 }
 @media (max-width: 36em) {
   .header::before {
@@ -95,7 +95,7 @@ html {
 .header::after {
   /* ~660 pixel hoch <=> 33vw */
   height: 39vw;
-  background-image: url("../../img/background_transparent.png");
+  background-image: url("../img/background_transparent.png");
 }
 @media (max-width: 36em) {
   .header::after {
