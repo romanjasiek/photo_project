@@ -1,81 +1,66 @@
-.header {
-    overflow: hidden;
-    position: relative;
-    height: 40rem;
-    min-height: calc(13rem + 32vw);
-}
-
-@media (max-width: 75em) {
-    .header {
-        height: calc(14rem + 32vw); 
-    }
-}
-
-.header::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    top: 0;
-    bottom: -8rem;
-    background-image: url("../img/background.jpeg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: 100% auto;
-}
-
 .header__container{
     position:relative;
 }
 
+.header {
+    overflow: hidden;
+    position: relative;
+    height: 39rem;
+    min-height: calc(13rem + 32vw);
+
+    @media (max-width: 75em) {
+        .header {
+            height: calc(13rem + 32vw); 
+    }
+}
+}
+
+.header::before,
 .header::after {
     content: "";
-    position: absolute;
-    height: 38.5vw;
+    position: absolute; 
     width: 100vw;
     bottom: -8rem;
-    background-image: url("../img/background_transparent.webp");
+
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% auto;
+
+    /** 1200px oder schmaler */
+    @media (max-width: 75em) {
+        bottom: -4rem;
+    }
+
+    @media (max-width: 62em) {
+        bottom: -1rem;
+    }
 }
 
-@media (max-width: 75em) {
-    .header::before  {
-        bottom: -4rem;
-    }
-    .header::after {
-        bottom: -4rem;
-    }
-}
-@media (max-width: 62em) {
-    .header::before  {
-        bottom: -1rem;
-    }
-    .header::after {
-        bottom: -1rem;
-    }
-}
-@media (max-width: 36em) { 
-    .header::before {
+.header::before {
+    top: 0;
+    background-image: url("../../img/background.jpeg");
+
+    @media (max-width: 36em) { 
         background-size: cover;
     }
-    .header::after {
+}
+
+.header::after {
+    /* ~660 pixel hoch <=> 33vw */
+    height: 39vw;
+    background-image: url("../../img/background_transparent.png");
+
+    @media (max-width: 36em) { 
         display: none;
-    }
-    .header__heading-sub-main {
-        font-size: 0.5rem;
-    }
-    .header__heading-sub-main {
-        font-size: 0.2rem;
     }
 }
 
 .header__heading-container{
-    padding-top: 2.5rem;
     clear:both;
 }
 
 .header__heading-main{
+    padding-top: 1rem;
     font-weight: 700;
     font-size: 7rem;
     text-align: center;
@@ -88,8 +73,20 @@
     animation-duration: 5s;
     animation-fill-mode: both;
     animation-timing-function: ease-in-out;
-}
 
+
+    @media (max-width: 62em) {
+        .header__heading-main {
+            font-size: 5rem;
+        }
+    }
+
+    @media (max-width: 48em) {
+        .header__heading-main {
+            font-size: 3rem;
+        }
+    }
+}
 @keyframes header__heading-main-font-weight {
     0% {
         opacity: 0;
@@ -101,26 +98,11 @@
     }
 }
 
-@media (max-width: 62em) {
-    .header__heading-main {
-        font-size: 5rem;
-    }
-}
-
-@media (max-width: 48em) {
-    .header__heading-main {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 36em) {
-    .header__heading-main {
-        font-size: 2rem;
-    }
-}
 
 .header__heading-sub-main{
-    font-size: 1.0rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
     letter-spacing: 0.5rem;
     text-align: center;
     color: rgb(233, 196, 106);
@@ -128,10 +110,21 @@
     text-shadow: 0 0 0.5rem black;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 48em) {
+        font-size: 1rem;
+        font-weight: 200;
+    }
+    @media (max-width: 36em) {
+        font-size: 0.5rem;
+        font-weight: 100;
+    }
 }
 
 .header__heading-sub-second{
+    margin-top: 0.1rem;
     font-size: 0.5rem;
+    font-weight: 100;
     letter-spacing: 0.5rem;
     text-align: center;
     color: #eeeeee;
@@ -139,36 +132,30 @@
     text-shadow: 0 0 0.5rem black;
     position: relative;
     z-index: 1;
-}
 
-@media (max-width: 48em) {
-    .header__heading-sub-main {
-        font-size: 0.8rem;
+    @media (max-width: 48em) {
+            font-size: 0.3rem;
+            font-weight: 100;
     }
-    .header__heading-sub-second {
-        font-size: 0.3rem;
-    }
-}
-
-@media (max-width: 36em) {
-    .header__heading-sub-main {
-        font-size: 0.3rem;
-    }
-    .header__heading-sub-second {
+    @media (max-width: 36em) {
         font-size: 0.1rem;
-    }
+        font-weight: 100;
+}
 }
 
+
+// This is the "divider shape" on the bottom of the header image
 .header__slope {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     height: 10vw;
-    background-image: linear-gradient(-1.71deg, white 49.9%, transparent 50.1%);
-    background-repeat: no-repeat, no-repeat;
+    z-index: 1;
+
+    background-image: linear-gradient(-5.71deg, white 49.9%, transparent 50.1%);
+    background-repeat: no-repeat;
     background-position: center 100%;
     background-size: 100vw 10vw;
-    z-index: 1;
 }
 
