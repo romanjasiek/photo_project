@@ -1,3 +1,5 @@
+@use "../abstracts/" as *;
+
 .header__container{
     position:relative;
 }
@@ -26,15 +28,15 @@
     background-position: center bottom;
     background-size: 100% auto;
 
-    @media (min-width: 75.1em) and (max-width: 90em) {
+    @media (min-width: $breakpoint-nearly_lg) and (max-width: $breakpoint-xl) {
         bottom: -9rem;
     }
 
-    @media (min-width: 62.1em) and (max-width: 75em) {
+    @media (min-width: $breakpoint_nearly_above_md) and (max-width: $breakpoint-lg) {
         bottom: -5rem;
     }
 
-    @media (max-width: 62em) {
+    @media (max-width: $breakpoint-md) {
         bottom: -1rem;
     }
 }
@@ -43,15 +45,15 @@
     top: 0;
     background-image: url("../img/background.jpeg");
 
-    @media (min-width: 48.1em) and (max-width: 61.9em) {
+    @media (min-width: $breakpoint-nearly_sm) and (max-width: $breakpoint-nearly_md) {
         background-size: cover;
     }
 
-    @media (max-width: 48em) {
+    @media (max-width: $breakpoint-sm) {
         background-size: cover;
     }
 
-    @media (max-width: 36em) { 
+    @media (max-width: $breakpoint-xs) { 
         background-size: cover;
     }
 }
@@ -61,11 +63,11 @@
     height: 39vw;
     background-image: url("../img/background_transparent.png");
 
-    @media (max-width: 48em) { 
+    @media (max-width: $breakpoint-sm) { 
         display: none;
     }
     
-    @media (max-width: 36em) { 
+    @media (max-width: $breakpoint-xs) { 
         display: none;
     }
 }
@@ -90,15 +92,15 @@
     animation-timing-function: ease-in-out;
 
 
-    @media (max-width: 62em) {
+    @media (max-width: $breakpoint-md) {
             font-size: 5rem;
     }
 
-    @media (max-width: 48em) {
+    @media (max-width: $breakpoint-sm) {
             font-size: 2.55rem;
     }
 
-    @media (max-width: 36em) {
+    @media (max-width: $breakpoint-xs) {
         font-size: 2rem;
 }
 }
@@ -126,12 +128,12 @@
     position: relative;
     z-index: 1;
 
-    @media (max-width: 48em) {
+    @media (max-width: $breakpoint-sm) {
         font-size: 1rem;
         font-weight: 200;
         text-shadow: none;
     }
-    @media (max-width: 36em) {
+    @media (max-width: $breakpoint-xs) {
         font-size: 0.5rem;
         font-weight: 100;
         text-shadow: none;
@@ -150,12 +152,12 @@
     position: relative;
     z-index: 1;
 
-    @media (max-width: 48em) {
+    @media (max-width: $breakpoint-sm) {
             font-size: 0.3rem;
             font-weight: 100;
             text-shadow: none;
     }
-    @media (max-width: 36em) {
+    @media (max-width: $breakpoint-xs) {
         display: none;
 }
 }

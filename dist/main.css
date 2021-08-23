@@ -1,3 +1,8 @@
+/* 1200px or less **/
+/* 992px or less **/
+/* Between 769 and 991 */
+/* 768px or less **/
+/* 576px or less **/
 * {
   margin: 0;
   padding: 0;
@@ -281,10 +286,5 @@ html {
   height: 4rem;
   fill: currentColor;
 }
-
-/* 1200px or less **/
-/* 992px or less **/
-/* 768px or less **/
-/* 576px or less **/
 
 /*# sourceMappingURL=main.css.map */

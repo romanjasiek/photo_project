@@ -5,7 +5,7 @@
 This file was created on 2021-08-21, but I already have spent some time working on this project. From now on I (hopefully) will put more effort in this file to make some notes about what I have done so far.
 ## Things I used (so far):
 
-**2021/08/21:**
+**Until 2021/08/21:**
 - HTML
     - Included an svg file directly inside the HTML
 - CSS
@@ -14,9 +14,12 @@ This file was created on 2021-08-21, but I already have spent some time working 
 - GitHub
     - With a main and a development branch
 - Google Fonts (embedded locally)
+- Adobe Photoshop / Adobe Lightroom for image editing
+
+**2021/08/23:**
+- GitHub Pages
 
 ## To Do:
 
 - Convert ttf to woff2
     - Alt: Compress ttf
-- Create a GitHub page

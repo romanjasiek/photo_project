@@ -1,0 +1,30 @@
+// Breakpoints
+
+$breakpoint-xl: 90em!default;
+$breakpoint-lg: 75em!default;
+$breakpoint-nearly_lg: 75.1em!default;
+$breakpoint_nearly_above_md: 62.1em!default;
+$breakpoint-md: 62em!default;
+$breakpoint-nearly_md: 61.9em!default;
+$breakpoint-sm: 48em!default;
+$breakpoint-nearly_sm: 48.1em!default;
+$breakpoint-xs: 36em!default;
+
+/* 1200px or less **/
+@media (max-width: $breakpoint-lg) {}
+
+/* 992px or less **/
+@media (max-width: $breakpoint-md) {}
+
+/* Between 769 and 991 */
+@media (min-width: $breakpoint-nearly_md) and (max-width: $breakpoint-nearly_md) {}
+
+/* 768px or less **/
+@media (max-width: $breakpoint-sm) {}
+
+/* 576px or less **/
+@media (max-width: $breakpoint-xs) {}
+
+// Colors
+
+$color-primary: rgb(233, 196, 106)!default;

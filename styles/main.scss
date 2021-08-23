@@ -1,17 +1,6 @@
+@use "abstracts";
 @use "base";
 @use "components";
 @use "layout";
 @use "pages";
 @use "vendors";
-
-/* 1200px or less **/
-@media (max-width: 75em) {}
-
-/* 992px or less **/
-@media (max-width: 62em) {}
-
-/* 768px or less **/
-@media (max-width: 48em) {}
-
-/* 576px or less **/
-@media (max-width: 36em) {}
