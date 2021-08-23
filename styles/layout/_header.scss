@@ -26,9 +26,12 @@
     background-position: center bottom;
     background-size: 100% auto;
 
-    /** 1200px oder schmaler */
-    @media (max-width: 75em) {
-        bottom: -4rem;
+    @media (min-width: 75.1em) and (max-width: 90em) {
+        bottom: -9rem;
+    }
+
+    @media (min-width: 62.1em) and (max-width: 75em) {
+        bottom: -5rem;
     }
 
     @media (max-width: 62em) {
@@ -39,6 +42,10 @@
 .header::before {
     top: 0;
     background-image: url("../img/background.jpeg");
+
+    @media (min-width: 48.1em) and (max-width: 61.9em) {
+        background-size: cover;
+    }
 
     @media (max-width: 48em) {
         background-size: cover;
@@ -88,8 +95,12 @@
     }
 
     @media (max-width: 48em) {
-            font-size: 3rem;
+            font-size: 2.55rem;
     }
+
+    @media (max-width: 36em) {
+        font-size: 2rem;
+}
 }
 @keyframes header__heading-main-font-weight {
     0% {
@@ -118,10 +129,12 @@
     @media (max-width: 48em) {
         font-size: 1rem;
         font-weight: 200;
+        text-shadow: none;
     }
     @media (max-width: 36em) {
         font-size: 0.5rem;
         font-weight: 100;
+        text-shadow: none;
     }
 }
 
@@ -140,6 +153,7 @@
     @media (max-width: 48em) {
             font-size: 0.3rem;
             font-weight: 100;
+            text-shadow: none;
     }
     @media (max-width: 36em) {
         display: none;
