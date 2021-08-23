@@ -86,6 +86,11 @@ html {
   top: 0;
   background-image: url("../img/background.jpeg");
 }
+@media (max-width: 48em) {
+  .header::before {
+    background-size: cover;
+  }
+}
 @media (max-width: 36em) {
   .header::before {
     background-size: cover;
@@ -96,6 +101,11 @@ html {
   /* ~660 pixel hoch <=> 33vw */
   height: 39vw;
   background-image: url("../img/background_transparent.png");
+}
+@media (max-width: 48em) {
+  .header::after {
+    display: none;
+  }
 }
 @media (max-width: 36em) {
   .header::after {

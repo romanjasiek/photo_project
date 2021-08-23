@@ -40,6 +40,10 @@
     top: 0;
     background-image: url("../img/background.jpeg");
 
+    @media (max-width: 48em) {
+        background-size: cover;
+    }
+
     @media (max-width: 36em) { 
         background-size: cover;
     }
@@ -50,6 +54,10 @@
     height: 39vw;
     background-image: url("../img/background_transparent.png");
 
+    @media (max-width: 48em) { 
+        display: none;
+    }
+    
     @media (max-width: 36em) { 
         display: none;
     }
