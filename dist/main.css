@@ -123,12 +123,12 @@ html {
   animation-timing-function: ease-in-out;
 }
 @media (max-width: 62em) {
-  .header__heading-main .header__heading-main {
+  .header__heading-main {
     font-size: 5rem;
   }
 }
 @media (max-width: 48em) {
-  .header__heading-main .header__heading-main {
+  .header__heading-main {
     font-size: 3rem;
   }
 }

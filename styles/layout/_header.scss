@@ -76,15 +76,11 @@
 
 
     @media (max-width: 62em) {
-        .header__heading-main {
             font-size: 5rem;
-        }
     }
 
     @media (max-width: 48em) {
-        .header__heading-main {
             font-size: 3rem;
-        }
     }
 }
 @keyframes header__heading-main-font-weight {
