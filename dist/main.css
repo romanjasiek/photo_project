@@ -188,8 +188,7 @@ html {
 }
 @media (max-width: 36em) {
   .header__heading-sub-second {
-    font-size: 0.1rem;
-    font-weight: 100;
+    display: none;
   }
 }
 
