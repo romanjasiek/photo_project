@@ -82,7 +82,7 @@ html {
 @media (min-width: 62.1em) and (max-width: 75em) {
   .header::before,
 .header::after {
-    bottom: -5rem;
+    bottom: -5.8rem;
   }
 }
 @media (max-width: 62em) {
@@ -195,7 +195,7 @@ html {
 @media (max-width: 36em) {
   .header__heading-sub-main {
     font-size: 0.5rem;
-    font-weight: 100;
+    font-weight: 200;
     text-shadow: none;
   }
 }

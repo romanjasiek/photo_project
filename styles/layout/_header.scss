@@ -33,7 +33,7 @@
     }
 
     @media (min-width: $breakpoint_nearly_above_md) and (max-width: $breakpoint-lg) {
-        bottom: -5rem;
+        bottom: -5.8rem;
     }
 
     @media (max-width: $breakpoint-md) {
@@ -135,7 +135,7 @@
     }
     @media (max-width: $breakpoint-xs) {
         font-size: 0.5rem;
-        font-weight: 100;
+        font-weight: 200;
         text-shadow: none;
     }
 }
