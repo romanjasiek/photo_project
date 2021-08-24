@@ -76,7 +76,7 @@ html {
 @media (min-width: 75.1em) and (max-width: 90em) {
   .header::before,
 .header::after {
-    bottom: -9rem;
+    bottom: -10rem;
   }
 }
 @media (min-width: 62.1em) and (max-width: 75em) {
