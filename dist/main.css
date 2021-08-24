@@ -68,7 +68,7 @@ html {
   content: "";
   position: absolute;
   width: 100vw;
-  bottom: -8rem;
+  bottom: -12rem;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% auto;
