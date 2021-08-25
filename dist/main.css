@@ -98,21 +98,19 @@ html {
 }
 @media (min-width: 48.1em) and (max-width: 61.9em) {
   .header::before {
-    top: 0;
     background-size: cover;
     background-position: center top;
   }
 }
 @media (max-width: 48em) {
   .header::before {
-    top: 0;
     background-size: cover;
     background-position: center top;
   }
 }
 @media (max-width: 36em) {
   .header::before {
-    top: 0;
+    height: 100vh;
     background-size: cover;
     background-position: center top;
   }
