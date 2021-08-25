@@ -47,6 +47,7 @@
 
     @media (min-width: $breakpoint-nearly_sm) and (max-width: $breakpoint-nearly_md) {
         background-size: cover;
+        background-position: center top;
     }
 
     @media (max-width: $breakpoint-sm) {
@@ -95,17 +96,14 @@
 
 
     @media (max-width: $breakpoint-md) {
-            padding-top: none;
             font-size: 5rem;
     }
 
     @media (max-width: $breakpoint-sm) {
-            padding-top: none;
             font-size: 2.55rem;
     }
 
     @media (max-width: $breakpoint-xs) {
-        padding-top: none;
         font-size: 2rem;
 }
 }
