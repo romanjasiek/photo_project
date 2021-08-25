@@ -202,8 +202,8 @@ html {
 }
 @media (max-width: 36em) {
   .header__heading-sub-main {
-    font-size: 0.5rem;
-    font-weight: 200;
+    font-size: 0.8rem;
+    font-weight: 300;
     text-shadow: none;
   }
 }
