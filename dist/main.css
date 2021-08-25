@@ -93,6 +93,7 @@ html {
 }
 
 .header::before {
+  margin-top: 0;
   top: 0;
   background-image: url("../img/background.jpeg");
 }
