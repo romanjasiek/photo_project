@@ -82,7 +82,7 @@ html {
 @media (min-width: 62.1em) and (max-width: 75em) {
   .header::before,
 .header::after {
-    bottom: -5.8rem;
+    bottom: -3rem;
     background-position: top;
   }
 }
