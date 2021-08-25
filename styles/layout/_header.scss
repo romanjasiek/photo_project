@@ -46,16 +46,19 @@
     background-image: url("../img/background.jpeg");
 
     @media (min-width: $breakpoint-nearly_sm) and (max-width: $breakpoint-nearly_md) {
+        top: 0;
         background-size: cover;
         background-position: center top;
     }
 
     @media (max-width: $breakpoint-sm) {
+        top: 0;
         background-size: cover;
         background-position: center top;
     }
 
-    @media (max-width: $breakpoint-xs) { 
+    @media (max-width: $breakpoint-xs) {
+        top: 0; 
         background-size: cover;
         background-position: center top;
     }
