@@ -190,7 +190,7 @@ html {
 @media (max-width: 48em) {
   .header__heading-sub-main {
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 300;
     text-shadow: none;
   }
 }
