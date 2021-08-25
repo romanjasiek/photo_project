@@ -151,16 +151,19 @@ html {
 }
 @media (max-width: 62em) {
   .header__heading-main {
+    padding-top: none;
     font-size: 5rem;
   }
 }
 @media (max-width: 48em) {
   .header__heading-main {
+    padding-top: none;
     font-size: 2.55rem;
   }
 }
 @media (max-width: 36em) {
   .header__heading-main {
+    padding-top: none;
     font-size: 2rem;
   }
 }
