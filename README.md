@@ -19,6 +19,9 @@ This file was created on 2021-08-21, but I already have spent some time working 
 **2021/08/23:**
 - GitHub Pages
 
+**2021/08/24:**
+- Added Font Awesome locally via SCSS
+
 ## To Do:
 
 - Convert ttf to woff2

@@ -104,11 +104,13 @@ html {
 @media (max-width: 48em) {
   .header::before {
     background-size: cover;
+    background-position: center top;
   }
 }
 @media (max-width: 36em) {
   .header::before {
     background-size: cover;
+    background-position: center top;
   }
 }
 

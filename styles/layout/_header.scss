@@ -51,10 +51,12 @@
 
     @media (max-width: $breakpoint-sm) {
         background-size: cover;
+        background-position: center top;
     }
 
     @media (max-width: $breakpoint-xs) { 
         background-size: cover;
+        background-position: center top;
     }
 }
 
