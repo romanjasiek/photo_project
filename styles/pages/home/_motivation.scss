@@ -1,0 +1,84 @@
+@use "../../abstracts/" as *;
+
+@mixin motivation__image-position($top, $left) {
+    top: $top;
+    left: $left;
+
+    &:hover {
+        top: $top - 0.66rem;
+        left: calc(#{$left} - 0.66rem);
+    }
+}
+
+.motivation {
+    margin-top: 2rem;
+}
+
+.motivation__column-text {
+    float: left;
+    width: 33.33%;
+}
+
+.motivation__column-images {
+    position: relative;
+    float: left;
+    width: 66.66%;
+}
+
+.motivation__image {
+    position: absolute;
+    max-width: 50%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    box-sizing: content-box;
+
+    transform: scale(1);
+    transition: transform ease-in-out 0.25s;
+
+    &--first {
+        width: 56%;
+        z-index: 3;
+
+        @include motivation__image-position(11rem, 40%);
+    }
+        
+    &--second {
+        width: 95%;
+        z-index: 1;
+
+        @include motivation__image-position(0rem, 25%);
+    }
+
+    &--third {
+        width: 33%;
+        z-index: 2;
+
+        @include motivation__image-position(5rem, 10%);
+    }
+
+    &:hover {
+        border: 0.33rem solid $color-primary;
+        padding: 0.33rem;
+        z-index: 10;
+        transform: scale(1.25);
+    }
+}
+
+.motivation__text-heading {
+    margin-top: 4rem;
+    color: $color-secondary;
+    font-weight: 500;
+
+    &::before {
+        display: block;
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $color-secondary-light;
+        margin-bottom: 0.25rem;
+    }
+}
+
+.motivation__text {
+    color: $color-secondary;
+    margin-top: 0.2rem;
+}

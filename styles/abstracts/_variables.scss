@@ -1,3 +1,4 @@
+@use "sass:color"; 
 // Breakpoints
 
 $breakpoint-xl: 90em!default;
@@ -28,3 +29,5 @@ $breakpoint-xs: 36em!default;
 // Colors
 
 $color-primary: rgb(233, 196, 106)!default;
+$color-secondary: #555555!default;
+$color-secondary-light: color.scale($color-secondary, $lightness: 35%)!default;

@@ -45,6 +45,12 @@ html {
 .container {
   max-width: 75rem;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (max-width: 36em) {
+  .container {
+    padding: 0 1rem;
+  }
 }
 
 .header__container {
@@ -276,6 +282,8 @@ html {
 }
 .navigation__list-item--menu .navigation__list-item-link {
   margin-top: 0.4rem;
+  margin-right: 0;
+  padding-right: 0;
 }
 .navigation__list-item--menu .navigation__list-item-link:hover {
   border-bottom: none;
@@ -283,6 +291,8 @@ html {
 }
 .navigation__list-item-link--logo {
   margin-top: 0.9rem;
+  margin-left: 0;
+  padding-left: 0;
 }
 .navigation__list-item-link--logo:hover {
   border-bottom: none;
@@ -293,6 +303,85 @@ html {
   width: 4rem;
   height: 4rem;
   fill: currentColor;
+}
+
+.motivation {
+  margin-top: 2rem;
+}
+
+.motivation__column-text {
+  float: left;
+  width: 33.33%;
+}
+
+.motivation__column-images {
+  position: relative;
+  float: left;
+  width: 66.66%;
+}
+
+.motivation__image {
+  position: absolute;
+  max-width: 50%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  box-sizing: content-box;
+  transform: scale(1);
+  transition: transform ease-in-out 0.25s;
+}
+.motivation__image--first {
+  width: 56%;
+  z-index: 3;
+  top: 11rem;
+  left: 40%;
+}
+.motivation__image--first:hover {
+  top: 10.34rem;
+  left: calc(40% - 0.66rem);
+}
+.motivation__image--second {
+  width: 95%;
+  z-index: 1;
+  top: 0rem;
+  left: 25%;
+}
+.motivation__image--second:hover {
+  top: -0.66rem;
+  left: calc(25% - 0.66rem);
+}
+.motivation__image--third {
+  width: 33%;
+  z-index: 2;
+  top: 5rem;
+  left: 10%;
+}
+.motivation__image--third:hover {
+  top: 4.34rem;
+  left: calc(10% - 0.66rem);
+}
+.motivation__image:hover {
+  border: 0.33rem solid #e9c46a;
+  padding: 0.33rem;
+  z-index: 10;
+  transform: scale(1.25);
+}
+
+.motivation__text-heading {
+  margin-top: 4rem;
+  color: #555555;
+  font-weight: 500;
+}
+.motivation__text-heading::before {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #919191;
+  margin-bottom: 0.25rem;
+}
+
+.motivation__text {
+  color: #555555;
+  margin-top: 0.2rem;
 }
 
 /*!
