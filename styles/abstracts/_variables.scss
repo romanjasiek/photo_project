@@ -31,3 +31,4 @@ $breakpoint-xs: 36em!default;
 $color-primary: rgb(233, 196, 106)!default;
 $color-secondary: #555555!default;
 $color-secondary-light: color.scale($color-secondary, $lightness: 35%)!default;
+$color-secondary-dark: color.scale($color-secondary, $lightness: -50%)!default;
