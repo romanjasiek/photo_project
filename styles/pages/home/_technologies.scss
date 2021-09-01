@@ -4,8 +4,8 @@ $-technologies-background-color: $color-secondary-dark;
 
 .technologies {
     background-color: $-technologies-background-color;
-    height: 30rem;
     position: relative;
+    padding-bottom: 5rem;
 }
 
 %technologies__before-and-after {
@@ -67,13 +67,55 @@ $-technologies-background-color: $color-secondary-dark;
 }
 
 .technologies__card {
+    position: relative;
     width: 20%;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.technologies__card-heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.technologies__card-used-tech {
+    font-size: 1.1rem;
+    margin-bottom: 0.33rem;
+}
+
+.technologies__card-used-tech-desc {
+    font-size: 0.9rem;
 }
 
 .technologies__card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
 .technologies__card-icon {
     color: #fefefe;
+}
+
+.used-technologies__card-icon {
+    color: $color-primary;
+}
+
+.technologies__card-top {
+    background-color: $color-primary;
+    padding: 0 0.3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.technologies__card-content {
+    color: #fefefe;
+    // background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1rem;
 }
