@@ -42,6 +42,34 @@ html {
   border-bottom: none;
 }
 
+.button {
+  border: 0.125rem solid currentColor;
+  color: #e9c46a;
+  text-decoration: none;
+  padding: 1rem 6rem;
+  border-radius: 10000px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25;
+}
+.button:hover {
+  color: #edd088;
+}
+
+.button--white {
+  color: #fefefe;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+.button--white:hover {
+  color: #e6e6e6;
+}
+
+.button--background-blur {
+  -webkit-backdrop-filter: blur(3rem);
+  backdrop-filter: blur(3rem);
+}
+
 .container {
   max-width: 75rem;
   margin: 0 auto;
@@ -448,7 +476,7 @@ html {
 .technologies {
   background-color: #2b2b2b;
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 8.5rem;
 }
 
 .technologies::after, .technologies::before {
@@ -456,14 +484,16 @@ html {
   left: 0;
   right: 0;
   position: absolute;
-  content: "Web Dev";
+  content: "Full Stack Web Dev";
   text-transform: uppercase;
   color: #2b2b2b;
-  font-size: 10rem;
+  font-size: min(calc(100vw /11), 9rem);
   font-weight: bold;
   text-shadow: 0 0 1px white;
   text-align: center;
   z-index: 0;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @supports (-webkit-text-stroke: 2px rgba(255, 255, 255, 0.2)) or (text-stroke: 2px rgba(255, 255, 255, 0.2)) {
@@ -507,17 +537,20 @@ html {
   letter-spacing: 0.1em;
   text-align: center;
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 0.5rem;
   font-size: 2rem;
 }
 
 .technologies__cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .technologies__card {
+  flex: 0 0 14.2rem;
   position: relative;
-  width: 20%;
+  margin-top: 3rem;
   height: 21rem;
   overflow: hidden;
   box-shadow: 0 0 1rem transparent;
@@ -535,11 +568,18 @@ html {
 .technologies__card-heading {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .technologies__card-used-tech {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  display: flex;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .technologies__card-used-tech-desc {
@@ -556,6 +596,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
+  object-fit: cover;
 }
 
 .technologies__icon-container {
@@ -573,7 +614,8 @@ html {
   color: #fefefe;
   position: relative;
   padding-top: 0.55rem;
-  padding-left: 0.75rem;
+  padding-left: calc(9% - 0.75rem);
+  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
 }
 
 .used-technologies__card-icon {
@@ -610,6 +652,91 @@ html {
 }
 .technologies__card:hover .technologies__card-content {
   transform: translate(0, 0);
+}
+
+.story {
+  position: relative;
+  overflow: hidden;
+}
+
+.story__video {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  filter: grayscale(75%);
+}
+@supports (object-fit: cover) and (object-position: center center) {
+  .story__video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.story__video-colorize {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(85, 85, 85, 0.5);
+}
+
+.story__container {
+  position: relative;
+  z-index: 2;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.story__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .story__container {
+    padding: 0 1rem;
+  }
+}
+
+.story__heading {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 2rem;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.story__desc {
+  max-width: 40rem;
+  margin: 0 auto;
+  color: #fefefe;
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 0.125rem dotted #e9c46a;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+  text-align: justify;
+}
+@media (max-width: 48em) {
+  .story__desc {
+    column-count: 1;
+    text-align: left;
+  }
+}
+
+.story__contact {
+  text-align: center;
+  padding: 4rem 0 4rem 0;
+  display: block;
 }
 
 /*!
