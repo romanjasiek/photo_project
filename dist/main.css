@@ -292,7 +292,7 @@ html {
   bottom: 0;
   height: 10vw;
   z-index: 1;
-  background-image: linear-gradient(-5.71deg, white 49.9%, transparent 50.1%);
+  background-image: linear-gradient(-5.71deg, #fefefe 49.9%, transparent 50.1%);
   background-repeat: no-repeat;
   background-position: center 100%;
   background-size: 100vw 10vw;
@@ -737,6 +737,66 @@ html {
   text-align: center;
   padding: 4rem 0 4rem 0;
   display: block;
+}
+
+.skills {
+  background-color: #f0f0f0;
+  min-height: 5rem;
+}
+
+.skills__container {
+  display: flex;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-left: -0.66rem;
+  margin-right: -0.66rem;
+}
+
+.skills__card {
+  flex: 1 0 0px;
+  margin: 0 0.66rem;
+  background: #fefefe;
+  box-shadow: 0.5rem 0.5rem 2rem black;
+  border-left: 0.0625rem solid #e2e2e2;
+  border-right: 0.0625rem solid #e2e2e2;
+  border-top: 0.0625rem solid #e2e2e2;
+  position: relative;
+}
+
+.skills__card::after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 0;
+  left: -0.0625rem;
+  right: -0.0625rem;
+  height: 0.75rem;
+  background-color: #e9c46a;
+  border-left: 0.0625rem solid #d7c9a7;
+  border-right: 0.0625rem solid #d7c9a7;
+}
+
+.skills__image {
+  width: 100%;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+}
+
+.skills__image-container {
+  background-color: #e9c46a;
+  margin: -0.125rem -0.0625rem;
+}
+
+.skills__image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  background-image: linear-gradient(-5.71deg, #fefefe 50%, transparent 50%);
+  background-repeat: no-repeat;
+  background-position: 50% 1rem;
 }
 
 /*!

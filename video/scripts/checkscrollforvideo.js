@@ -1,18 +1,17 @@
-const checkScroll = () => {
+function checkScroll() {
+    const videos = document.querySelectorAll(".story__video");
 
-const videos = document.querySelectorAll(".story__video");
-    
-for(const video of videos) {
-    
-const boundingRect = video.getBoundingClientRect();
-const visible = (boundingRect.top + boundingRect.height > 0 && boundingRect.top < window.innerHeight);
-    
-    if (visible) {
-        video.play();
-    } else {
-        video.pause();
+    for(const video of videos) {
+        const boundingRect = video.getBoundingClientRect();
+        const visible = (boundingRect.top + boundingRect.height > 0 &&
+            boundingRect.top < window.innerHeight);
+
+        if (visible) {
+            video.play();
+        } else {
+            video.pause();
+        }
     }
-}
 }
 
 checkScroll();
