@@ -4,6 +4,7 @@
 $-skills-card-border-width: (1rem / 16);
 $-skills-card-border-color: rgba(0,0,0,0.15);
 $-skills-card-margin: 0.66rem;
+$-half-pixel-width: 1rem / 32;
 
 .skills {
     background-color: rgb(240, 240, 240);
@@ -21,8 +22,9 @@ $-skills-card-margin: 0.66rem;
 .skills__card {
     flex: 1 0 0px;
     margin: 0 $-skills-card-margin;
+    padding: 0 0 2rem 0;
     background: #fefefe;
-    box-shadow: 0.5rem 0.5rem 2rem black;
+    box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
     border-left: $-skills-card-border-width solid $-skills-card-border-color;
     border-right: $-skills-card-border-width solid $-skills-card-border-color;
     border-top: $-skills-card-border-width solid $-skills-card-border-color;
@@ -78,4 +80,101 @@ $-skills-card-margin: 0.66rem;
     background-image: linear-gradient(-$slope-incline, #fefefe 49.7%, transparent 50.3%);
     background-repeat: no-repeat;
     background-position: 50% 1rem;
+}
+
+.skills__content-heading {
+    color: $color-secondary-dark;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.skills__content {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+
+.skills__content-subheading {
+    color: $color-primary;
+    font-size: 1rem;
+}
+
+.skills__content-info {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    display: flex;
+    background-image: linear-gradient(90deg,
+        transparent calc(50% - #{$-half-pixel-width}),
+        rgba(0, 0, 0, 0.15) calc(50% - #{$-half-pixel-width}),
+        rgba(0, 0, 0, 0.15) calc(50% + #{$-half-pixel-width}),
+        transparent calc(50% + #{$-half-pixel-width})
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    background-position: center center;
+}
+
+%skills__content-info-column {
+    flex: 1 1 50%;
+    color: $color-secondary;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.skills__content-skill1 {
+    @extend %skills__content-info-column;
+}
+
+.skills__content-skill2 {
+    @extend %skills__content-info-column;
+}
+
+.skills__content-skill3-container {
+    padding-top: 1rem;
+    padding-left: 1.25rem;
+    font-size: 1rem;
+    color: $color-secondary;
+}
+
+.skills__content-skill3-highlighter {
+    display: block;
+    color: $color-primary;
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 0.9em;
+}
+
+.skills__card-hover {
+    position: absolute;
+    top: -$-skills-card-border-width;
+    left: -$-skills-card-border-width;
+    right: -$-skills-card-border-width;
+    bottom: -$-skills-card-border-width;
+    z-index: 2;
+
+    background-color: $color-primary;
+    background-image: linear-gradient(90deg,
+        transparent calc(50% - #{$-half-pixel-width}),
+      white calc(50% - #{$-half-pixel-width}),
+      white calc(50% + #{$-half-pixel-width}),
+        transparent calc(50% + #{$-half-pixel-width})
+    ), linear-gradient(135deg,
+        $color-primary 0%,
+        color.scale($color-primary, $lightness: -20%) 100%
+    );
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center center;
+    background-size: 100% calc(50% - 4rem), 100% 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    .skills__card:hover & {
+        opacity: 1;
+    }
 }

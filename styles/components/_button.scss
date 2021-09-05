@@ -30,3 +30,19 @@
     -webkit-backdrop-filter: blur(3rem);
     backdrop-filter: blur(3rem);
 }
+
+.button--secondary {
+    color: #fefefe;
+    background-color: $color-secondary;
+    border: 0.125rem solid $color-secondary;
+
+    &:hover {
+        color: $color-primary;
+        background-color: $color-secondary-dark;
+        }
+}
+
+.button--slim {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
