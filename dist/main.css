@@ -292,7 +292,7 @@ html {
   bottom: 0;
   height: 10vw;
   z-index: 1;
-  background-image: linear-gradient(-5.71deg, #fefefe 49.9%, transparent 50.1%);
+  background-image: linear-gradient(-5.7391704773deg, #fefefe 49.9%, transparent 50.1%);
   background-repeat: no-repeat;
   background-position: center 100%;
   background-size: 100vw 10vw;
@@ -757,9 +757,9 @@ html {
   margin: 0 0.66rem;
   background: #fefefe;
   box-shadow: 0.5rem 0.5rem 2rem black;
-  border-left: 0.0625rem solid #e2e2e2;
-  border-right: 0.0625rem solid #e2e2e2;
-  border-top: 0.0625rem solid #e2e2e2;
+  border-left: 0.0625rem solid rgba(0, 0, 0, 0.15);
+  border-right: 0.0625rem solid rgba(0, 0, 0, 0.15);
+  border-top: 0.0625rem solid rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
@@ -783,8 +783,23 @@ html {
 }
 
 .skills__image-container {
-  background-color: #e9c46a;
-  margin: -0.125rem -0.0625rem;
+  position: relative;
+  margin-top: -0.0625rem;
+  margin-right: -0.0625rem;
+  margin-left: -0.0625rem;
+}
+
+.skills__image-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  border-top: 0.0625rem solid rgba(0, 0, 0, 0.25);
+  border-right: 0.0625rem solid rgba(0, 0, 0, 0.25);
+  border-left: 0.0625rem solid rgba(0, 0, 0, 0.25);
 }
 
 .skills__image-container::after {
@@ -794,7 +809,7 @@ html {
   left: 0;
   right: 0;
   height: 8rem;
-  background-image: linear-gradient(-5.71deg, #fefefe 50%, transparent 50%);
+  background-image: linear-gradient(-5.7391704773deg, #fefefe 49.7%, transparent 50.3%);
   background-repeat: no-repeat;
   background-position: 50% 1rem;
 }
