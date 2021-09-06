@@ -13,22 +13,37 @@ $-half-pixel-width: 1rem / 32;
 
 .skills__container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
     margin-left: -$-skills-card-margin;
     margin-right: -$-skills-card-margin;
+    margin-top: ($-skills-card-margin * -2);
 }
 
 .skills__card {
-    flex: 1 0 0px;
-    margin: 0 $-skills-card-margin;
+    $-width: (100% / 3);
+
+    width: calc(#{$-width} - #{($-skills-card-margin * 2 + 0.001rem)});
+    margin: ($-skills-card-margin * 2) $-skills-card-margin 0 $-skills-card-margin;
     padding: 0 0 2rem 0;
-    background: #fefefe;
+    background-color: white;
     box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
     border-left: $-skills-card-border-width solid $-skills-card-border-color;
     border-right: $-skills-card-border-width solid $-skills-card-border-color;
     border-top: $-skills-card-border-width solid $-skills-card-border-color;
+
     position: relative;
+
+    @media (max-width: $breakpoint-md) {
+        $-width-md: (100% / 2);
+        width: calc(#{$-width-md} - #{($-skills-card-margin * 2 + 0.001rem)})
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        width: calc(100% - #{($-skills-card-margin * 2 + 0.001rem)})
+    }
 }
 
 .skills__card::after {
@@ -86,6 +101,9 @@ $-half-pixel-width: 1rem / 32;
     color: $color-secondary-dark;
     font-size: 1.75rem;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .skills__content {
