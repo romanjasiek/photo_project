@@ -770,29 +770,27 @@ html {
   margin-top: -1.32rem;
 }
 
-.skills__card {
+.skills__card-container {
   width: calc(33.3333333333% - 1.321rem);
   margin: 1.32rem 0.66rem 0 0.66rem;
-  padding: 0 0 2rem 0;
-  background-color: white;
-  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
-  border-left: 0.0625rem solid rgba(0, 0, 0, 0.15);
-  border-right: 0.0625rem solid rgba(0, 0, 0, 0.15);
-  border-top: 0.0625rem solid rgba(0, 0, 0, 0.15);
-  position: relative;
 }
 @media (max-width: 62em) {
-  .skills__card {
+  .skills__card-container {
     width: calc(50% - 1.321rem);
   }
 }
 @media (max-width: 48em) {
-  .skills__card {
+  .skills__card-container {
     width: calc(100% - 1.321rem);
   }
 }
 
-.skills__card::after {
+.skills__card {
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.skills__card-primary::after {
   position: absolute;
   content: "";
   display: block;
@@ -803,6 +801,14 @@ html {
   background-color: #e9c46a;
   border-left: 0.0625rem solid #d7c9a7;
   border-right: 0.0625rem solid #d7c9a7;
+}
+
+.skills__card-primary {
+  padding: 0 0 2rem 0;
+  background-color: #fefefe;
+  border-left: 0.0625rem solid rgba(0, 0, 0, 0.15);
+  border-right: 0.0625rem solid rgba(0, 0, 0, 0.15);
+  border-top: 0.0625rem solid rgba(0, 0, 0, 0.15);
 }
 
 .skills__image {
@@ -837,10 +843,15 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 8rem;
+  height: 5rem;
   background-image: linear-gradient(-5.7391704773deg, #fefefe 49.7%, transparent 50.3%);
   background-repeat: no-repeat;
   background-position: 50% 1rem;
+}
+@media (max-width: 48em) {
+  .skills__image-container::after {
+    height: 5rem;
+  }
 }
 
 .skills__content-heading {
@@ -917,6 +928,29 @@ html {
 }
 .skills__card:hover .skills__card-hover {
   opacity: 1;
+}
+
+.skills__card-container--flip {
+  perspective: 50rem;
+}
+.skills__card-container--flip .skills__card {
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+.skills__card-container--flip:hover .skills__card {
+  transform: rotateY(180deg);
+}
+.skills__card-container--flip .skills__card-primary {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+.skills__card-container--flip .skills__card-hover {
+  transform: rotateY(180deg);
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /*!
