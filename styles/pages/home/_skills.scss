@@ -233,3 +233,61 @@ $-half-pixel-width: 1rem / 32;
         backface-visibility: hidden;
     }
 }
+
+@mixin skills__card-hover-bg($alpha-dt: 0%) {
+    background-image: linear-gradient(90deg,
+        transparent calc(90% - #{$-half-pixel-width}),
+      white calc(50% - #{$-half-pixel-width}),
+      white calc(50% + #{$-half-pixel-width}),
+        transparent calc(50% + #{$-half-pixel-width})
+    ), linear-gradient(135deg,
+        color.scale($color-primary, $alpha: $alpha-dt) 0%,
+        color.scale($color-primary, $lightness: -20%, $alpha: $alpha-dt) 100%
+    );
+}
+
+%skills__card-container--3d-effect {
+    perspective: 50rem;
+
+    .skills__card {
+        transition: transform 0.5s ease-in-out;
+        transform: rotateX(calc(calc(var(--mouse-y, 0.5) - 0.5) * -20deg)) rotateY(calc(calc(var(--mouse-x, 0.5) - 0.5) * 20deg));
+    }
+
+    &:hover .skills__card {
+        transition: transform 0.1s linear;
+    }
+}
+
+.skills__card-container--3d {
+    @extend %skills__card-container--3d-effect;
+
+    .skills__card-hover {
+        display: none;
+    }
+}
+
+.skills__card-container--3d-hover {
+    @extend %skills__card-container--3d-effect;
+
+    .skills__card-primary {
+        transform-style: preserve-3d;
+        filter: blur(0rem);
+        transition: filter 0.5s ease-in-out;
+    }
+
+    .skills__card {
+        transform-style: preserve-3d;
+    }
+
+    .skills__card-hover {
+        background-color: transparent;
+        @include skills__card-hover-bg(-25%);
+
+        transform: translateZ(1rem);
+    }
+
+    &:hover .skills__card-primary {
+        filter: blur(0.5rem);
+    }
+}

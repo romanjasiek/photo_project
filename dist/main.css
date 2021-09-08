@@ -953,6 +953,38 @@ html {
   backface-visibility: hidden;
 }
 
+.skills__card-container--3d-hover, .skills__card-container--3d {
+  perspective: 50rem;
+}
+.skills__card-container--3d-hover .skills__card, .skills__card-container--3d .skills__card {
+  transition: transform 0.5s ease-in-out;
+  transform: rotateX(calc(calc(var(--mouse-y, 0.5) - 0.5) * -20deg)) rotateY(calc(calc(var(--mouse-x, 0.5) - 0.5) * 20deg));
+}
+.skills__card-container--3d-hover:hover .skills__card, .skills__card-container--3d:hover .skills__card {
+  transition: transform 0.1s linear;
+}
+
+.skills__card-container--3d .skills__card-hover {
+  display: none;
+}
+
+.skills__card-container--3d-hover .skills__card-primary {
+  transform-style: preserve-3d;
+  filter: blur(0rem);
+  transition: filter 0.5s ease-in-out;
+}
+.skills__card-container--3d-hover .skills__card {
+  transform-style: preserve-3d;
+}
+.skills__card-container--3d-hover .skills__card-hover {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, transparent calc(90% - 0.03125rem), white calc(50% - 0.03125rem), white calc(50% + 0.03125rem), transparent calc(50% + 0.03125rem)), linear-gradient(135deg, rgba(233, 196, 106, 0.75) 0%, rgba(224, 173, 47, 0.75) 100%);
+  transform: translateZ(1rem);
+}
+.skills__card-container--3d-hover:hover .skills__card-primary {
+  filter: blur(0.5rem);
+}
+
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
