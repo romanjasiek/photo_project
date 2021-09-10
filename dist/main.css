@@ -1303,8 +1303,8 @@ html {
 }
 
 .about__img {
-  width: 28rem;
-  height: 28rem;
+  width: 24rem;
+  height: 24rem;
   object-fit: cover;
   float: left;
   border-radius: 1000000px;
@@ -1313,26 +1313,26 @@ html {
 }
 @media (max-width: 75em) {
   .about__img {
-    width: 25.2rem;
-    height: 25.2rem;
+    width: 21.6rem;
+    height: 21.6rem;
   }
 }
 @media (max-width: 62em) {
   .about__img {
-    width: 22.4rem;
-    height: 22.4rem;
+    width: 19.2rem;
+    height: 19.2rem;
   }
 }
 @media (max-width: 48em) {
   .about__img {
-    width: 11.2rem;
-    height: 11.2rem;
+    width: 9.6rem;
+    height: 9.6rem;
   }
 }
 @media (max-width: 36em) {
   .about__img {
-    width: 8.4rem;
-    height: 8.4rem;
+    width: 7.2rem;
+    height: 7.2rem;
   }
 }
 
@@ -1449,6 +1449,59 @@ html {
 }
 .about__quote::after {
   content: "“";
+}
+
+.contact-modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 20000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(43, 43, 43, 0.85);
+  color: #fefefe;
+}
+.contact-modal:target {
+  display: flex;
+}
+
+.contact-modal__content {
+  position: relative;
+  width: 45rem;
+  height: 25rem;
+  padding-left: 18rem;
+  background-image: linear-gradient(95.7391704773deg, transparent 33%, rgba(145, 145, 145, 0.85) 33.15%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 100%), url("../img/modal/modal_bg.jpeg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center center, center center, center 30%;
+  background-size: auto, auto, cover;
+}
+
+.contact-modal__close {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: transparent;
+  border-radius: 100000px;
+  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(-45deg, transparent 44%, #e9c46a 45%, #e9c46a 55%, transparent 56%), linear-gradient(45deg, transparent 44%, #e9c46a 45%, #e9c46a 55%, transparent 56%);
+}
+.contact-modal__close:hover {
+  opacity: 0.8;
+}
+
+.contact-modal__heading {
+  padding-top: 3rem;
+  color: #fefefe;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 
 /*!
