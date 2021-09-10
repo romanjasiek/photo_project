@@ -2,12 +2,9 @@
     fill: currentColor;
     height: 1em;
     vertical-align: middle;
-    position: relative;
-    top: -0.075em;
-    border-bottom: none;
-}
 
-.icon:hover {
-    fill:rgb(233, 196, 106);
-    border-bottom: none;
+    &:not(.icon--no-position) {
+        position: relative;
+        top: -0.075em;
+    }
 }
