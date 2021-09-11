@@ -83,6 +83,44 @@ html {
   padding-right: 2rem;
 }
 
+.form__group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  background-color: transparent;
+  border: 0.125rem solid #e9c46a;
+  padding: 0.75rem 1rem;
+  color: #fefefe;
+  border-radius: 10000px;
+  font-size: 1rem;
+  width: 12.5rem;
+}
+
+.form__input:focus {
+  outline-offset: 0px;
+  outline: none;
+  border: 1px solid #e9c46a;
+  box-shadow: 0 0 0.5rem #e9c46a;
+  -moz-box-shadow: 0 0 0.5rem #e9c46a;
+  -webkit-box-shadow: 0 0 0.5rem #e9c46a;
+}
+
+.form__input::placeholder {
+  color: #fefefe;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  color: #e9c46a;
+}
+
 .container {
   max-width: 75rem;
   margin: 0 auto;
