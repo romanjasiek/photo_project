@@ -17,6 +17,20 @@
     }
 }
 
+.button--form {
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    color: black;
+    background-color: $color-primary;
+    border: 0.125rem solid $color-primary;
+    font-weight: normal;
+    text-transform: none;
+
+    &:hover {
+        color: rgb(50, 50, 50);
+    }
+}
+
 .button--white {
     color: #fefefe;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
