@@ -2,7 +2,7 @@
 @use "sass:color";
 
 $-contact-modal-width: 45rem;
-$-contact-modal-height: 25rem;
+$-contact-modal-height: 27rem;
 
 .contact-modal {
     display: none;
@@ -136,4 +136,19 @@ $-contact-modal-height: 25rem;
     font-weight: 250;
     margin-bottom: 1rem;
     text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.contact-modal__notice {
+    color: $color-secondary-dark;
+    font-size:x-small;
+    padding: 1rem 1rem;
+}
+
+.contact-modal__notice-link {
+    text-decoration: none;
+    color: $color-secondary-dark;
+}
+
+.contact-modal__notice-link {
+    color: $color-primary;
 }
