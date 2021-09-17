@@ -7,6 +7,16 @@
 html {
     font-family: 'Jost', sans-serif;
     font-size: 100%;
+
+    @media (min-width: 100em) {
+        font-size: 133%;
+    }
+    @media (min-width: 133em) {
+        font-size: 166%;
+    }
+    @media (min-width: 166em) {
+        font-size: 200%;
+    }
 }
 
 input,

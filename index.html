@@ -62,9 +62,21 @@
                 <p class="motivation__text">It looks like a photography portfolio (and in a way it is, after all all the photos are taken and edited by me), but at the same time it is also a document of what I have learned so far on my way to become a web developer.</p>
             </div>
             <div class="motivation__column-images">
-                <img class="motivation__image motivation__image--first" src="./img/motivation/aberfoyle.jpeg" alt="Aberfoyle">
-                <img class="motivation__image motivation__image--second" src="./img/motivation/bali.jpeg" alt="Bali">
-                <img class="motivation__image motivation__image--third" src="./img/motivation/fieldsofthenephilim.jpeg" alt="Fields of the Nephilim">
+                <picture>
+                    <source sizes="(max-width: 600px) 50vw, 550px" srcset="dist/img/motivation/aberfoyle.150w.webp 150w, dist/img/motivation/aberfoyle.300w.webp 300w, dist/img/motivation/aberfoyle.600w.webp 600w, dist/img/motivation/aberfoyle.900w.webp 900w" type="image/webp" />
+                    <source sizes="(max-width: 600px) 50vw, 550px" srcset="dist/img/motivation/aberfoyle.150w.jpeg 150w, dist/img/motivation/aberfoyle.300w.jpeg 300w, dist/img/motivation/aberfoyle.600w.jpeg 600w, dist/img/motivation/aberfoyle.900w.jpeg 900w" />
+                    <img class="motivation__image motivation__image--first" src="img/motivation/aberfoyle.jpeg" alt="" />
+                </picture>
+                <picture>
+                    <source sizes="(max-width: 600px) 33vw, 280px" srcset="dist/img/motivation/bali.150w.webp 150w, dist/img/motivation/bali.300w.webp 300w, dist/img/motivation/bali.600w.webp 600w, dist/img/motivation/bali.900w.webp 900w" type="image/webp" />
+                    <source sizes="(max-width: 600px) 33vw, 280px" srcset="dist/img/motivation/bali.150w.jpeg 150w, dist/img/motivation/bali.300w.jpeg 300w, dist/img/motivation/bali.600w.jpeg 600w, dist/img/motivation/bali.900w.jpeg 900w" />
+                    <img class="motivation__image motivation__image--second" src="img/motivation/bali.jpeg" alt="" />
+                </picture>
+                <picture>
+                    <source sizes="(max-width: 600px) 36vw, 320px" srcset="dist/img/motivation/fieldsofthenephilim.150w.webp 150w, dist/img/motivation/fieldsofthenephilim.300w.webp 300w, dist/img/motivation/fieldsofthenephilim.600w.webp 600w, dist/img/motivation/fieldsofthenephilim.900w.webp 900w" type="image/webp" /> 
+                    <source sizes="(max-width: 600px) 36vw, 320px" srcset="dist/img/motivation/fieldsofthenephilim.150w.jpeg 150w, dist/img/motivation/fieldsofthenephilim.300w.jpeg 300w, dist/img/motivation/fieldsofthenephilim.600w.jpeg 600w, dist/img/motivation/fieldsofthenephilim.jpeg 900w" /> 
+                    <img class="motivation__image motivation__image--third" src="img/motivation/fieldsofthenephilim.jpeg" alt="" />
+                </picture>
             </div>
         </div>
     </section>
@@ -295,10 +307,26 @@
     <section class="about">
         <div class="container">
             <div class="about__slideshow">
-                <img class="about__img" src="./img/about/rj.jpg" alt="Roman Jasiek" />
-                <img class="about__img about__img--slideshow about__img--slideshow-1" src="./img/about/rj2.jpg" alt="Roman Jasiek" />
-                <img class="about__img about__img--slideshow about__img--slideshow-2" src="./img/about/rj3.jpg" alt="Roman Jasiek" />
-                <img class="about__img about__img--slideshow about__img--slideshow-3" src="./img/about/rj4.jpg" alt="Roman Jasiek" />
+                <picture>
+                    <source sizes="(max-width: 500px) 150px, (max-width: 770px) 200px, 460px" srcset="dist/img/about/rj.150w.webp 150w, dist/img/about/rj.300w.webp 300w, dist/img/about/rj.600w.webp 600w, dist/img/about/rj.900w.webp 900w, dist/img/about/rj.1200w.webp 1200w" type="image/webp" />
+                    <source sizes="(max-width: 500px) 150px, (max-width: 770px) 200px, 460px" srcset="dist/img/about/rj.150w.jpeg 150w, dist/img/about/rj.300w.jpeg 300w, dist/img/about/rj.600w.jpeg 600w, dist/img/about/rj.900w.jpeg 900w, dist/img/about/rj.1200w.jpeg 1200w" />
+                    <img class="about__img" src="img/about/rj.jpg" alt="" />
+                </picture>
+                <picture>
+                    <source sizes="(max-width: 500px) 150px, (max-width: 770px) 200px, 460px" srcset="dist/img/about/rj2.150w.webp 150w, dist/img/about/rj2.300w.webp 300w, dist/img/about/rj2.600w.webp 600w, dist/img/about/rj2.900w.webp 900w, dist/img/about/rj2.1200w.webp 1200w" type="image/webp" />
+                    <source sizes="(max-width: 500px) 150px, (max-width: 770px) 200px, 460px" srcset="dist/img/about/rj2.jpeg 150w, dist/img/about/rj2.300w.jpeg 300w, dist/img/about/rj2.600w.jpeg 600w, dist/img/about/rj2.900w.jpeg 900w, dist/img/about/rj2.1200w.jpeg 1200w" />
+                    <img class="about__img about__img--slideshow about__img--slideshow-1" src="img/about/rj2.jpg" alt="" />
+                </picture>
+                <picture>
+                    <source sizes="(max-width: 500px) 150px, (max-width: 770px) 200px, 460px" srcset="dist/img/about/rj3.150w.webp 150w, dist/img/about/rj3.300w.webp 300w, dist/img/about/rj3.600w.webp 600w, dist/img/about/rj3.900w.webp 900w, dist/img/about/rj3.1200w.webp 1200w" type="image/webp" />
+                    <source sizes="(max-width: 500px) 150px, (max-width: 770px) 200px, 460px" srcset="dist/img/about/rj3.150w.jpeg 150w, dist/img/about/rj3.300w.jpeg 300w, dist/img/about/rj3.600w.jpeg 600w, dist/img/about/rj3.900w.jpeg 900w, dist/img/about/rj3.1200w.jpeg 1200w" />
+                    <img class="about__img about__img--slideshow about__img--slideshow-2" src="img/about/rj3.jpg" alt="" />
+                </picture>
+                <picture>
+                    <source sizes="(max-width: 500px) 150px, (max-width: 770px) 200px, 460px" srcset="dist/img/about/rj4.150w.webp 150w, dist/img/about/rj4.300w.webp 300w, dist/img/about/rj4.600w.webp 600w, dist/img/about/rj4.900w.webp 900w, dist/img/about/rj4.1200w.webp 1200w" type="image/webp" />
+                    <source sizes="(max-width: 500px) 150px, (max-width: 770px) 200px, 460px" srcset="dist/img/about/rj4.150w.jpeg 150w, dist/img/about/rj4.300w.jpeg 300w, dist/img/about/rj4.600w.jpeg 600w, dist/img/about/rj4.900w.webp 900w, dist/img/about/rj4.1200w.jpeg 1200w" />
+                    <img class="about__img about__img--slideshow about__img--slideshow-3" src="img/about/rj4.jpg" alt="" />
+                </picture>
             </div>
             <div class="about__text">
                 <h3 class="about__heading">About Me</h3>

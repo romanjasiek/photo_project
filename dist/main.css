@@ -14,6 +14,21 @@ html {
   font-family: "Jost", sans-serif;
   font-size: 100%;
 }
+@media (min-width: 100em) {
+  html {
+    font-size: 133%;
+  }
+}
+@media (min-width: 133em) {
+  html {
+    font-size: 166%;
+  }
+}
+@media (min-width: 166em) {
+  html {
+    font-size: 200%;
+  }
+}
 
 input,
 select {
@@ -682,13 +697,7 @@ select {
   width: 0px;
   height: 0px;
   overflow: hidden;
-  transition: width 0s linear 1s, height 0s linear 1s;
-  /*
-  pointer-events: none;
-  .sidenav__opened:checked ~ & {
-      pointer-events: all;
-  }
-  */
+  transition: width 0s linear 0.9s, height 0s linear 0.9s;
 }
 .sidenav__opened:checked ~ .sidenav {
   transition: width 0s linear 0s, height 0s linear 0s;
@@ -705,7 +714,7 @@ select {
   right: 0;
   background-color: rgba(0, 0, 0, 0.85);
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.9s ease-in-out;
 }
 .sidenav__opened:checked ~ .sidenav .sidenav__background {
   opacity: 1;
@@ -722,7 +731,7 @@ select {
   box-shadow: 0 0 1rem black;
   transform: translate(calc(100% + 1rem), 0);
   will-change: transform;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.9s ease-in-out;
 }
 .sidenav__opened:checked ~ .sidenav .sidenav__container {
   transform: translate(0, 0);
@@ -961,7 +970,7 @@ select {
 }
 
 .technologies__card {
-  flex: 0 0 14.2rem;
+  flex: 0 0 20%;
   position: relative;
   margin-top: 3rem;
   height: 21rem;
@@ -970,6 +979,11 @@ select {
   transform: scale(1);
   z-index: 0;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, z-index 0.3s linear;
+}
+@media (max-width: 75em) {
+  .technologies__card {
+    flex: 0 0 14.2rem;
+  }
 }
 .technologies__card:hover {
   transform: scale(1.1);
