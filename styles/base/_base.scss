@@ -43,3 +43,37 @@ select {
 ::selection {
     @include -generate-selection();
 }
+
+.auto-grid {
+    background-color: #fefefe;
+    color: $color-secondary;
+    --auto-grid-min-size: 32rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 2rem;
+
+    @include make-container();
+  }
+  
+  .auto-grid li {
+    padding-top: 1.5rem;
+    list-style-type: none;
+  }
+  .auto-grid li h4 {
+    transition: color 2s ease-in-out;
+  }
+  .auto-grid li h4:hover {
+    color: $color-primary;
+    transition: all 0s;
+  }
+
+  .download-cv {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+  }
+
+.more-about__heading {
+    text-transform: uppercase;
+    padding-bottom: 0.25rem;
+}
