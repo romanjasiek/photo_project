@@ -10,7 +10,7 @@
   <body>
     <input type="checkbox" class="sidenav__opened" id="sidenav__opened" autocomplete="off" />
     <header class="header">
-    <div class="header__container">
+    <div class="header__container" id="home">
         <nav class="nav">
             <ul>
                 <li class="navigation__list-item">
@@ -22,13 +22,15 @@
                           </svg>
                     </a></li>
                 <li class="navigation__list-item navigation__list-item--mobile-hidden">
-                    <a class="navigation__list-item-link" href="#">Home</a></li>
+                    <a class="navigation__list-item-link" href="#home">Home</a></li>
+                    <li class="navigation__list-item navigation__list-item--mobile-hidden">
+                        <a class="navigation__list-item-link" href="#usedtechnologies">Used Technologies</a></li>
                 <li class="navigation__list-item navigation__list-item--mobile-hidden">
-                    <a class="navigation__list-item-link" href="#">Reflections</a></li>
+                    <a class="navigation__list-item-link" href="#gallery">Reflections</a></li>
                 <li class="navigation__list-item navigation__list-item--mobile-hidden">
-                    <a class="navigation__list-item-link" href="#">About Me</a></li>
+                    <a class="navigation__list-item-link" href="#aboutme">About Me</a></li>
                 <li class="navigation__list-item navigation__list-item--mobile-hidden">
-                    <a class="navigation__list-item-link" href="#">Legal Notes</a></li>
+                    <a class="navigation__list-item-link" href="#getintouch">Contact</a></li>
                     <li class="navigation__list-item navigation__list-item--menu">
                         <label class="navigation__list-item-link" for="sidenav__opened">
                             <svg class="icon" viewBox="0 0 512 512">
@@ -81,7 +83,7 @@
             </div>
         </div>
     </section>
-    <section class="technologies">
+    <section class="technologies" id="usedtechnologies">
         <div class="technologies__container">
         <h2 class="technologies__heading">Used Technologies</h2>
         <div class="technologies__cards">
@@ -254,7 +256,7 @@
     </section>
     <section class="gallery">
         <div class="gallery__container">
-            <h3 class="gallery__heading">Gallery</h3>
+            <h3 class="gallery__heading" id="gallery">Gallery</h3>
 
             <div class="gallery__list">
                 <a class="gallery__list-item gallery__list-item--first" href="#">
@@ -308,7 +310,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="aboutme">
         <div class="container">
             <div class="about__slideshow">
                 <picture>
@@ -370,7 +372,7 @@
               <a class="button" href="#">Download CV</a>
           </div>
     </section>
-    <section class="footer">
+    <section class="footer" id="getintouch">
         <div class="footer__container">
             <div class="footer__text-column">
                 <h3 class="footer__heading">Get in touch?</h3>
@@ -497,10 +499,11 @@
             <label for="sidenav__opened" class="sidenav__close">X</label>
             <nav>
                 <ul class="sidenav__nav">
-                    <li><a href="#" class="sidenav__nav-link">Home</a></li>
-                    <li><a href="#" class="sidenav__nav-link">Reflections</a></li>
-                    <li><a href="#" class="sidenav__nav-link">About Me</a></li>
-                    <li><a href="#" class="sidenav__nav-link">Legal Notes</a></li>
+                    <li><a href="#home" class="sidenav__nav-link">Home</a></li>
+                    <li><a href="#usedtechnologies" class="sidenav__nav-link">Used Technologies</a></li>
+                    <li><a href="#gallery" class="sidenav__nav-link">Reflections</a></li>
+                    <li><a href="#aboutme" class="sidenav__nav-link">About Me</a></li>
+                    <li><a href="#getintouch" class="sidenav__nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
