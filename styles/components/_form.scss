@@ -1,8 +1,13 @@
-@use "../abstracts/" as *;
+@use "../abstracts" as *;
 @use "sass:color";
 
 $-form__input-padding: 0.75rem 1rem;
 $-form__input-border: 0.125rem;
+
+.form__horizontal {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .form__group {
     position: relative;
@@ -14,34 +19,52 @@ $-form__input-border: 0.125rem;
     }
 }
 
-.form__horizontal {
-    display: flex;
-    flex-wrap: wrap;
+
+
+.form__input {
+    background-color: transparent;
+    border: $-form__input-border solid $color-primary;
+    padding: $-form__input-padding;
+    color: $color-primary;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+    border-radius: 10000px;
+    font-size: 1rem;
+    width: 12.5rem;
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: transparent;
+        text-shadow: none;
+    }
 }
 
-// .form__input {
-//     background-color: transparent;
-//     border: $-form__input-border solid $color-primary;
-//     padding: $-form__input-padding;
-//     color: #fefefe;
-//     border-radius: 10000px;
-//     font-size: 1rem;
-//     width: 12.5rem;
-//     caret-color: $color-primary;
+.form__textarea {
+    resize: none;
+    background-color: transparent;
+    border: $-form__input-border solid $color-primary;
+    padding: 0.175rem 1rem;
+    color: $color-primary;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+    border-radius: 10000px;
+    font-size: 1rem;
+    width: 26.5rem;
+    font-family: inherit;
 
-//     &:focus{
-//         outline-offset: 0px;
-//         outline: none;
-//         border: $-form__input-border solid $color-primary;
-//         box-shadow: 0 0 0.5rem $color-primary;
-//         -moz-box-shadow: 0 0 0.5rem $color-primary;
-//         -webkit-box-shadow: 0 0 0.5rem $color-primary;
-//     }
+    &:focus {
+        outline: none;
+    }
 
-//     &::placeholder {
-//         color: transparent;
-//     }
-// }
+    &::placeholder {
+        color: transparent;
+        text-shadow: none;
+    }
+}
 
 .form__label {
     position: absolute;
@@ -50,7 +73,7 @@ $-form__input-border: 0.125rem;
     font-size: 1rem;
     margin: $-form__input-padding;
     color: $color-primary;
-    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 1rem  rgba(0, 0, 0, 0.5);
 
     transform-origin: 0% 50%;
     transform: scale(1) translate(0, 0);
@@ -60,10 +83,11 @@ $-form__input-border: 0.125rem;
     .form__input:focus ~ &,
     .form__input[placeholder]:not(:placeholder-shown) ~ & {
         transform: scale(0.75) translate(0.4rem, 2.7rem);
-    } 
-    
-    .form__input-message[placeholder]:not(:placeholder-shown) ~ & {
-        transform: scale(0.75) translate(0.4rem, 3.9rem);
+    }
+
+    .form__textarea:focus ~ &,
+    .form__textarea[placeholder]:not(:placeholder-shown) ~ & {
+        transform: scale(0.75) translate(0.4rem, 3rem);
     }
 }
 
@@ -80,7 +104,13 @@ $-form__input-border: 0.125rem;
     color: $color-primary;
     font-size: 1rem;
     padding-top: 0.1rem;
-    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+
+    /*
+    .form__radio-item-radio:checked ~ & {
+        font-weight: bold;
+    }
+    */
 }
 
 .form__radio-item--white {
@@ -95,11 +125,10 @@ $-form__input-border: 0.125rem;
         display: inline-block;
         width: 0.9em;
         height: 0.9em;
-        border: 0.175em solid $color-primary;
+        border: 0.175em solid white;
         border-radius: 100000px;
-        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
         margin-right: 0.5em;
-        background-image: radial-gradient(circle at center center,#{$color-primary} 49%, transparent 50%);
+        background-image: radial-gradient(circle at center center,white 49%, transparent 50%);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 0 0;
