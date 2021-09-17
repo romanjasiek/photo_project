@@ -7,6 +7,7 @@
     <link href="./dist/main.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <input type="checkbox" class="sidenav__opened" id="sidenav__opened" autocomplete="off" />
     <header class="header">
     <div class="header__container">
         <nav class="nav">
@@ -423,6 +424,20 @@
                     <input type="submit" class="button button--form" value="Send!" />
                 </div>
             </form>
+        </div>
+    </section>
+    <section class="sidenav">
+        <label for="sidenav__opened" class="sidenav__background"></label>
+        <div class="sidenav__container">
+            <label for="sidenav__opened" class="sidenav__close">X</label>
+            <nav>
+                <ul class="sidenav__nav">
+                    <li><a href="#" class="sidenav__nav-link">Home</a></li>
+                    <li><a href="#" class="sidenav__nav-link">Reflections</a></li>
+                    <li><a href="#" class="sidenav__nav-link">About Me</a></li>
+                    <li><a href="#" class="sidenav__nav-link">Legal Notes</a></li>
+                </ul>
+            </nav>
         </div>
     </section>
     <script> </script>
