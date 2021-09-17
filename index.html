@@ -254,31 +254,31 @@
         </div>
         </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="gallery__container">
-            <h3 class="gallery__heading" id="gallery">Gallery</h3>
+            <h3 class="gallery__heading">Gallery</h3>
 
             <div class="gallery__list">
-                <a class="gallery__list-item gallery__list-item--first" href="#">
-                    <img class="gallery__list-item-image" src="./img/gallery/agadir.jpeg" alt="Agadir" />
+                <a class="gallery__list-item gallery__list-item--first">
+                    <img class="gallery__list-item-image" src="./img/gallery/agadir.jpeg" alt="Agadir" onclick="openModal();currentSlide(1)" />
                 </a>
                 <a class="gallery__list-item" href="#">
-                    <img class="gallery__list-item-image" src="./img/gallery/barcelona.jpg" alt="Barcelona" />
+                    <img class="gallery__list-item-image" src="./img/gallery/barcelona.jpg" alt="Barcelona" onclick="openModal();currentSlide(2)" />
                 </a>
                 <a class="gallery__list-item" href="#">
-                    <img class="gallery__list-item-image" src="./img/gallery/chimp.jpeg" alt="Chimp" />
+                    <img class="gallery__list-item-image" src="./img/gallery/chimp.jpeg" alt="Chimp" onclick="openModal();currentSlide(3)" />
                 </a>
                 <a class="gallery__list-item" href="#">
-                    <img class="gallery__list-item-image" src="./img/gallery/cruiseships.jpeg" alt="Cruise Ships" />
+                    <img class="gallery__list-item-image" src="./img/gallery/cruiseships.jpeg" alt="Cruise Ships" onclick="openModal();currentSlide(4)" />
                 </a>
                 <a class="gallery__list-item" href="#">
-                    <img class="gallery__list-item-image" src="./img/gallery/lanzarote.jpeg" alt="Lanzarote" />
+                    <img class="gallery__list-item-image" src="./img/gallery/lanzarote.jpeg" alt="Lanzarote" onclick="openModal();currentSlide(5)" />
                 </a>
                 <a class="gallery__list-item" href="#">
-                    <img class="gallery__list-item-image" src="./img/gallery/oslo.jpeg" alt="Oslo" />
+                    <img class="gallery__list-item-image" src="./img/gallery/oslo.jpeg" alt="Oslo" onclick="openModal();currentSlide(6)" />
                 </a>
                 <a class="gallery__list-item" href="#">
-                    <img class="gallery__list-item-image" src="./img/gallery/vnvnation.jpeg" alt="VNV Nation" />
+                    <img class="gallery__list-item-image" src="./img/gallery/vnvnation.jpeg" alt="VNV Nation" onclick="openModal();currentSlide(7)" />
                 </a>
             </div>
             <input class="gallery__cb-toggle" id="gallery__cb-toggle" type="checkbox" autocomplete="off" />
@@ -509,10 +509,91 @@
             </nav>
         </div>
     </section>
+    <section class="lightbox">
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+          
+              <div class="mySlides">
+                <div class="numbertext">1 / 7</div>
+                <img src="./img/gallery/agadir.jpeg" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">2 / 7</div>
+                <img src="./img/gallery/barcelona.jpg" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">3 / 7</div>
+                <img src="./img/gallery/chimp.jpeg" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">4 / 7</div>
+                <img src="./img/gallery/cruiseships.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">5 / 7</div>
+                <img src="./img/gallery/lanzarote.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">6 / 7</div>
+                <img src="./img/gallery/oslo.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">7 / 7</div>
+                <img src="./img/gallery/vnvnation.jpeg" style="width:100%">
+              </div>
+          
+              <!-- Next/previous controls -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+              <!-- Caption text -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+          
+              <!-- Thumbnail image controls -->
+              <div class="column">
+                <img class="demo" src="./img/gallery/agadir.jpeg" onclick="currentSlide(1)" alt="Agadir">
+              </div>
+          
+              <div class="column">
+                <img class="demo" src="./img/gallery/barcelona.jpg" onclick="currentSlide(2)" alt="Barcelona">
+              </div>
+          
+              <div class="column">
+                <img class="demo" src="./img/gallery/chimp.jpeg" onclick="currentSlide(3)" alt="Chimp">
+              </div>
+          
+              <div class="column">
+                <img class="demo" src="./img/gallery/cruiseships.jpeg" onclick="currentSlide(4)" alt="Cruise Ships">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery/lanzarote.jpeg" onclick="currentSlide(5)" alt="Lanzarote">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery/oslo.jpeg" onclick="currentSlide(6)" alt="Oslo">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery/vnvnation.jpeg" onclick="currentSlide(7)" alt="VNV Nation">
+              </div>
+            </div>
+          </div>
+    </section>
     <script> </script>
     <script src="./scripts/checkscrollforvideo.js" async></script>
     <script src="./scripts/addmousepositiontocss.js" async></script>
     <script src="./scripts/fixmodalclose.js" async></script>
+    <script src="./scripts/lightbox.js" async></script>
     <script src="./styles/vendors/Bootstrap/js/bootstrap.bundle.min.js" async></script>
   </body>
 </html>
