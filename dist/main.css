@@ -4,6 +4,7 @@
 /* Between 769 and 991 */
 /* 768px or less **/
 /* 576px or less **/
+/** 400px or less */
 * {
   margin: 0;
   padding: 0;
@@ -29,10 +30,25 @@ html {
     font-size: 200%;
   }
 }
+@media (max-width: 25em) {
+  html {
+    font-size: 75%;
+  }
+}
 
 input,
 select {
   font-family: inherit;
+}
+
+::-moz-selection {
+  color: white;
+  background-color: rgba(85, 85, 85, 0.8);
+}
+
+::selection {
+  color: white;
+  background-color: rgba(85, 85, 85, 0.8);
 }
 
 @font-face {

@@ -12,6 +12,7 @@ $breakpoint-nearly_md: 61.9em!default;
 $breakpoint-sm: 48em!default;
 $breakpoint-nearly_sm: 48.1em!default;
 $breakpoint-xs: 36em!default;
+$breakpoint-xxs: 25em!default;
 
 /* 1200px or less **/
 @media (max-width: $breakpoint-lg) {}
@@ -27,6 +28,9 @@ $breakpoint-xs: 36em!default;
 
 /* 576px or less **/
 @media (max-width: $breakpoint-xs) {}
+
+/** 400px or less */
+@media (max-width: $breakpoint-xxs) {}
 
 // Colors
 

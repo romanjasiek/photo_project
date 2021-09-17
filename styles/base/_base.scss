@@ -1,3 +1,6 @@
+@use "../abstracts" as *;
+@use "sass:color";
+
 * {
     margin: 0;
     padding: 0;
@@ -17,9 +20,26 @@ html {
     @media (min-width: 166em) {
         font-size: 200%;
     }
+
+    @media (max-width: $breakpoint-xxs) {
+        font-size: 75%;
+    }
 }
 
 input,
 select {
     font-family: inherit;
+}
+
+@mixin -generate-selection() {
+    color: white;
+    background-color: color.scale($color-secondary, $alpha: -20%);
+}
+
+::-moz-selection {
+    @include -generate-selection();
+}  
+
+::selection {
+    @include -generate-selection();
 }
