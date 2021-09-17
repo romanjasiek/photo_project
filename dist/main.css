@@ -351,6 +351,13 @@ select {
     background-position: center top;
   }
 }
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+  .header::before {
+    height: 100vh;
+    background-size: cover;
+    background-position: center top;
+  }
+}
 
 .header::after {
   /* ~660 pixel hoch <=> 33vw */
