@@ -259,25 +259,25 @@
             <h3 class="gallery__heading">Gallery</h3>
 
             <div class="gallery__list">
-                <a class="gallery__list-item gallery__list-item--first">
+                <a class="gallery__list-item gallery__list-item--first" href="#gallery">
                     <img class="gallery__list-item-image" src="./img/gallery/agadir.jpeg" alt="Agadir" onclick="openModal();currentSlide(1)" />
                 </a>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery">
                     <img class="gallery__list-item-image" src="./img/gallery/barcelona.jpg" alt="Barcelona" onclick="openModal();currentSlide(2)" />
                 </a>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery">
                     <img class="gallery__list-item-image" src="./img/gallery/chimp.jpeg" alt="Chimp" onclick="openModal();currentSlide(3)" />
                 </a>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery">
                     <img class="gallery__list-item-image" src="./img/gallery/cruiseships.jpeg" alt="Cruise Ships" onclick="openModal();currentSlide(4)" />
                 </a>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery">
                     <img class="gallery__list-item-image" src="./img/gallery/lanzarote.jpeg" alt="Lanzarote" onclick="openModal();currentSlide(5)" />
                 </a>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery">
                     <img class="gallery__list-item-image" src="./img/gallery/oslo.jpeg" alt="Oslo" onclick="openModal();currentSlide(6)" />
                 </a>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery">
                     <img class="gallery__list-item-image" src="./img/gallery/vnvnation.jpeg" alt="VNV Nation" onclick="openModal();currentSlide(7)" />
                 </a>
             </div>
@@ -286,25 +286,25 @@
                 <label class="button" for="gallery__cb-toggle">Load More</label>
             </div>
             <div class="gallery__list gallery__list--cb-toggle">
-                <a class="gallery__list-item gallery__list-item--last" href="#">
+                <a class="gallery__list-item gallery__list-item--last" href="#gallery" onclick="openModal();currentSlide(8)">
                     <span class="gallery__list-item-bg-image" style="background-image: url('./img/gallery2/agadir2.jpeg');">
                 </a></span>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery" onclick="openModal();currentSlide(9)">
                     <span class="gallery__list-item-bg-image" style="background-image: url('./img/gallery2/cannes.jpeg');">
                 </a></span>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery" onclick="openModal();currentSlide(10)">
                     <span class="gallery__list-item-bg-image" style="background-image: url('./img/gallery2/corsica.jpeg');">
                 </a></span>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery" onclick="openModal();currentSlide(11)">
                     <span class="gallery__list-item-bg-image" style="background-image: url('./img/gallery2/monkeys.jpeg');">
                 </a></span>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery" onclick="openModal();currentSlide(12)">
                     <span class="gallery__list-item-bg-image" style="background-image: url('./img/gallery2/ocean.jpeg');">
                 </a></span>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery" onclick="openModal();currentSlide(13)">
                     <span class="gallery__list-item-bg-image" style="background-image: url('./img/gallery2/vaticancity.jpeg');">
                 </a></span>
-                <a class="gallery__list-item" href="#">
+                <a class="gallery__list-item" href="#gallery" onclick="openModal();currentSlide(14)">
                     <span class="gallery__list-item-bg-image" style="background-image: url('./img/gallery2/wismar.jpeg');">
                 </a></span>
             </div>
@@ -511,43 +511,78 @@
     </section>
     <section class="lightbox">
         <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <span class="lightbox-close cursor" onclick="closeModal()">&times;</span>
             <div class="modal-content">
           
               <div class="mySlides">
-                <div class="numbertext">1 / 7</div>
+                <div class="numbertext">1 / 14</div>
                 <img src="./img/gallery/agadir.jpeg" style="width:100%">
               </div>
           
               <div class="mySlides">
-                <div class="numbertext">2 / 7</div>
+                <div class="numbertext">2 / 14</div>
                 <img src="./img/gallery/barcelona.jpg" style="width:100%">
               </div>
           
               <div class="mySlides">
-                <div class="numbertext">3 / 7</div>
+                <div class="numbertext">3 / 14</div>
                 <img src="./img/gallery/chimp.jpeg" style="width:100%">
               </div>
           
               <div class="mySlides">
-                <div class="numbertext">4 / 7</div>
+                <div class="numbertext">4 / 14</div>
                 <img src="./img/gallery/cruiseships.jpeg" style="width:100%">
               </div>
 
               <div class="mySlides">
-                <div class="numbertext">5 / 7</div>
+                <div class="numbertext">5 / 14</div>
                 <img src="./img/gallery/lanzarote.jpeg" style="width:100%">
               </div>
 
               <div class="mySlides">
-                <div class="numbertext">6 / 7</div>
+                <div class="numbertext">6 / 14</div>
                 <img src="./img/gallery/oslo.jpeg" style="width:100%">
               </div>
 
               <div class="mySlides">
-                <div class="numbertext">7 / 7</div>
+                <div class="numbertext">7 / 14</div>
                 <img src="./img/gallery/vnvnation.jpeg" style="width:100%">
               </div>
+
+              <div class="mySlides">
+                  <div class="numbertext">8 / 14</div>
+                  <img src="./img/gallery2/agadir2.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">9 / 14</div>
+                <img src="./img/gallery2/cannes.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">10 / 14</div>
+                <img src="./img/gallery2/corsica.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">11 / 14</div>
+                <img src="./img/gallery2/monkeys.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">12 / 14</div>
+                <img src="./img/gallery2/ocean.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">13 / 14</div>
+                <img src="./img/gallery2/vaticancity.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">14 / 14</div>
+                <img src="./img/gallery2/wismar.jpeg" style="width:100%">
+            </div>
           
               <!-- Next/previous controls -->
               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -585,6 +620,34 @@
 
               <div class="column">
                 <img class="demo" src="./img/gallery/vnvnation.jpeg" onclick="currentSlide(7)" alt="VNV Nation">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery2/agadir2.jpeg" onclick="currentSlide(8)" alt="Agadir">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery2/cannes.jpeg" onclick="currentSlide(8)" alt="Cannes">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery2/corsica.jpeg" onclick="currentSlide(8)" alt="Corsica">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery2/monkeys.jpeg" onclick="currentSlide(8)" alt="Monkeys">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery2/ocean.jpeg" onclick="currentSlide(8)" alt="Ocean">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery2/vaticancity.jpeg" onclick="currentSlide(8)" alt="Vatican City">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="./img/gallery2/wismar.jpeg" onclick="currentSlide(8)" alt="Wismar">
               </div>
             </div>
           </div>

@@ -22,10 +22,10 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -36,5 +36,34 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  captionText.innerText = dots[slideIndex-1].alt;
+}
+
+document.addEventListener(
+  'keydown',
+  function(event) {
+    if(event.key === "Escape") {
+      closeModal()
+    }
+  },
+  false
+)
+
+function lightBoxFixClose() {
+  const elements = document.querySelectorAll(".lightbox-close");
+  for(const element of elements) {
+      element.addEventListener("click", function() {
+          const scrollY = window.scrollY;
+          const scrollX = window.scrollX;
+          setTimeout(function() {
+              window.scrollTo({top: scrollY, left: scrollX});
+          }, 1);
+      });
+  }
+}
+
+if (document.readyState === "complete" || document.readyState === "interactive") {
+  setTimeout(lightBoxFixClose, 1);
+} else {
+  document.addEventListener("DOMContentLoaded", lightBoxFixClose, false);
 }
