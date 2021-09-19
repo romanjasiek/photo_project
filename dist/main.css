@@ -851,6 +851,7 @@ img.hover-shadow {
 
 .footer__footer-link {
   display: inline-block;
+  font-size: 0.75rem;
   color: #fefefe;
   text-decoration: none;
   padding: 0.3rem 3rem;
@@ -1996,6 +1997,43 @@ img.hover-shadow {
 }
 
 .contact-modal__notice-link {
+  color: #e9c46a;
+}
+
+.more-tech {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background: #fefefe;
+  color: #555555;
+}
+.more-tech::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .more-tech {
+    padding: 0 1rem;
+  }
+}
+
+.more-tech__heading {
+  text-transform: uppercase;
+}
+
+.more-tech__icon {
+  padding-right: 1rem;
+  color: #e9c46a;
+}
+
+.more-tech__link {
+  text-decoration: none;
+  color: #555555;
+  font-weight: 700;
+}
+
+.more-tech__link:hover {
   color: #e9c46a;
 }
 
